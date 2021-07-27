@@ -16,3 +16,11 @@ php package_statistics.php udeb-armel
 El mirror de Debian utilizado es el siguiente http://ftp.uk.debian.org/debian/dists/stable/main/.
 
 Es un ejercicio relativamente sencillo donde se aplica el uso de Array, manejo de archivos (descargar de URL y entrar en un .gz), manejo de excepciones, y como mostrar por CLI los datos.
+
+Es mi primer proyecto en PHP sin haber contado con experiencia previa en el lenguaje.
+
+Me llevo 45 minutos para pensar como iba a esquematizarlo.
+Luego unas 2 horas consultando documentacion.
+Aproximadamente 4 horas para codearlo.
+
+Total: ~ 7 hs
