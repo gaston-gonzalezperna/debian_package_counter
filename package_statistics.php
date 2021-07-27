@@ -32,10 +32,10 @@ class Package_Statistics {
         $array = $this->createDataStructure->createArray($gzFile);
         //var_dump($array);
         $countedArray = $this->countAndSortValues->count($array);
-        var_dump($countedArray);
-        // $returnArray = $this->truncArray->trunc($countedArray);
-        // echo $returnArray;
-
+        //var_dump($countedArray);
+        $returnArray = $this->truncArray->trunc($countedArray);
+        var_dump($returnArray);
+        
     }
 }
 
