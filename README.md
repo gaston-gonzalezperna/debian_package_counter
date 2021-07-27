@@ -15,4 +15,4 @@ php package_statistics.php udeb-armel
 
 El mirror de Debian utilizado es el siguiente http://ftp.uk.debian.org/debian/dists/stable/main/.
 
-Es un ejercicio relativamente sencillo donde se aplica el uso de Array, manejo de archivos (descargar de URL y entrar en un .gz) y como mostrar por CLI esos datos.
+Es un ejercicio relativamente sencillo donde se aplica el uso de Array, manejo de archivos (descargar de URL y entrar en un .gz), manejo de excepciones, y como mostrar por CLI los datos.

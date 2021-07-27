@@ -1,5 +1,19 @@
 <?php
 
+/*
+
+Decidí separarlo en pequeños casos de uso:
+- Crear la URL en funcion del parámetro que se pasa en el llamado del archivo. Si no se pasa el parametro, se arroja una excepcion. El CU permite ajustar facilmente la url en el caso de que cambie.
+- Descargar el archivo gz. Arroja una excepción si la url no es encontrada.
+- Crear la estructura de datos con el contenido de ese .gz removiendo todo lo que no es necesario para el alcance de este ejercicio.
+- Contar la cantidad de repeticiones de cada uno de los paquetes y agregarlo a un nuevo array. A la vez en este CU se ordena el contenido de mayor a menor en funcion de las repeticiones.
+- Se trunca el array. El CU permite variar por si cambia en un futuro el requisito de 10 a mas valores.
+
+Una posible mejora podría ser implementar un Factory para la creación de esta clase, ya que se pueden definir mucho mejor los límites de, por ejemplo, la cantidad de valores maximos que se quieren.
+
+*/
+
+
 require_once "src\CreateUrl.php";
 require_once "src\DownloadGz.php";
 require_once "src\CreateDataStructure.php";
