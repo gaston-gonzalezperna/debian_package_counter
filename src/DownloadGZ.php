@@ -5,7 +5,11 @@ class DownloadGZ{
     function __construct(){}
 
     function download($url){
-        file_put_contents("Contents.gz", fopen($url, 'r'));
+        $fileToOpen = fopen($url, 'r');
+        if(!$fileToOpen){
+            throw new Exception('File open failed.');
+        }
+        file_put_contents("Contents.gz", $fileToOpen);
         $save = getcwd()."\Contents.gz";
         return $save;
     }

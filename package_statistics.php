@@ -38,4 +38,9 @@ class Package_Statistics {
 }
 
 $package = new Package_Statistics();
-$package -> start($argv);
+
+try {
+    $package -> start($argv);
+} catch (Exception $e) {
+    echo 'Exception: ',  $e->getMessage(), "\n";
+}
