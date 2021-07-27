@@ -1,7 +1,15 @@
 <?php
 
-namespace src;
+use PharData;
 
 class DecompressGZ{
-    function __construct(){}
+    private $gzTest = "C:\Users\Gaston\Desktop\Gaston\Gcoop\debian_package_counter\src\Packages.gz";
+
+    function __construct(){
+    }
+
+    function decompress(){
+        $p = new PharData($this->gzTest);
+        $file = $p->decompress();
+    }
 }
