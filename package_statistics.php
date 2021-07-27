@@ -5,6 +5,8 @@ require_once "src\DownloadGz.php";
 require_once "src\CreateDataStructure.php";
 require_once "src\CountAndSortValues.php";
 require_once "src\TruncArray.php";
+require_once "src\ShowData.php";
+
 
 class Package_Statistics {
     private $createUrl;
@@ -12,6 +14,7 @@ class Package_Statistics {
     private $createDataStructure;
     private $countAndSortValues;
     private $truncArray;
+    private $showData;
 
     function __construct(){
 
@@ -20,22 +23,17 @@ class Package_Statistics {
         $this->createDataStructure = new CreateDataStructure();
         $this->countAndSortValues = new CountAndSortValues();
         $this->truncArray = new TruncArray();
-   
+        $this->showData = new ShowData();
     }
 
     function start($argument){
 
         $url = $this->createUrl->create($argument);
-       // var_dump($url);
         $gzFile = $this->downloadGz->download($url);
-        //var_dump($gzFile);
         $array = $this->createDataStructure->createArray($gzFile);
-        //var_dump($array);
         $countedArray = $this->countAndSortValues->count($array);
-        //var_dump($countedArray);
         $returnArray = $this->truncArray->trunc($countedArray);
-        var_dump($returnArray);
-        
+        $this->showData->show($returnArray);
     }
 }
 
